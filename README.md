@@ -36,7 +36,7 @@ We can see that started from early April, the awareness of wearing mask is getti
 ![image](image/korea_confirmed.png)
 
 * Mask google trend
-![image](image/korea_confirmed.png)
+![image](image/korea_mask.png)
 
 By mid-March, 270,000 South Koreans had been tested <br>
 daily rate of confirmed number: 482 -> 110 -> 21<br>
