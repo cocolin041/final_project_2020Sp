@@ -45,5 +45,5 @@ We use Korean word --- 마스크 to get the google trend data in South Korea. <b
 We can see that started from mid March, the awareness of wearing mask is getting higher in South Korea, and thus the confirmed number getting flatten afterwards.
 
 ## Conclusion
-Hypothesis that mass test would be helpful is valid for Germany, Korea
+Hypothesis that mass test would be helpful is valid for Germany, Korea<br>
 Hypothesis that wearing mask would be helpful is valid for Germany, Korea
