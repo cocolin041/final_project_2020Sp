@@ -5,7 +5,7 @@ This is the final project of IS590PR, this project is Type II
 By finding out the relation between each country’s policies and their COVID-19 confirmed rate change, to know which policy, treatment would be the helpful to control the outbreak
 
 ## Data Source
-https://www.kaggle.com/sudalairajkumar/novel-corona-virus-2019-dataset
+https://www.kaggle.com/sudalairajkumar/novel-corona-virus-2019-dataset<br>
 Google Trend
 
 ## Hypothesis
