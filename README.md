@@ -6,6 +6,7 @@ By finding out the relation between each country’s policies and their COVID-19
 
 ## Data Source
 https://www.kaggle.com/sudalairajkumar/novel-corona-virus-2019-dataset
+Google Trend
 
 ## Hypothesis
 (1) Mass test could help decrease the outbreak efficiently <br>
