@@ -101,6 +101,13 @@ if __name__ == '__main__':
     # convert string into date
     data['ObservationDate'] = pd.to_datetime(data['ObservationDate'])
 
+    #read in google trend data
+    world_mask = pd.read_csv('./data/world_mask.csv')
+    world_mask['天'] = pd.to_datetime(world_mask['天'])
+    italy_mask = pd.read_csv('./data/italy_mask.csv')
+    italy_mask['天'] = pd.to_datetime(italy_mask['天'])
+
+    #extract different countries data
     US = combine_state('US')
     France = combine_state('France')
     Japan = extract_country(data, 'Japan')
@@ -111,9 +118,22 @@ if __name__ == '__main__':
     UK = extract_country(data, 'UK')
     Poland = extract_country(data, 'Poland')
 
+    germany_mask = world_mask[['天', 'masque: (法國)']]
+    korea_mask = world_mask[['天', '마스크: (南韓)']]
+
     #Germany
     plt.figure(figsize=(10, 8))
     plt.plot(Germany['ObservationDate'], Germany['Confirmed'])
+    plt.title('Germany COVID-19 confirmed number')
+    plt.xlabel('date')
+    plt.ylabel('confirmed number')
+    plt.show()
+
+    plt.figure(figsize=(10, 8))
+    plt.plot(germany_mask['天'], germany_mask['masque: (法國)'])
+    plt.title('Germany search masque(mask) google trend')
+    plt.xlabel('date')
+    plt.ylabel('search count')
     plt.show()
 
     outbreak_date = calculate_start_outbreak_date(Germany)
@@ -122,44 +142,21 @@ if __name__ == '__main__':
     calculate_rate(Germany, outbreak_date, '2020/04/10')
     calculate_rate(Germany, '2020/04/10', '2020/05/04')
 
-    #US
-    plt.figure(figsize=(10, 8))
-    plt.plot(US.index, US['Confirmed'])
-    plt.show()
-
-    outbreak_date = calculate_start_outbreak_date(US)
-    print('outbreak at:', outbreak_date)
-
-    #Italy
-    plt.figure(figsize=(10, 8))
-    plt.plot(Italy['ObservationDate'], Italy['Confirmed'])
-    plt.show()
-
-    outbreak_date = calculate_start_outbreak_date(Italy)
-    print('outbreak at:', outbreak_date)
-
     #Korea
     plt.figure(figsize=(10, 8))
     plt.plot(Korea['ObservationDate'], Korea['Confirmed'])
+    plt.title('South Korea COVID-19 confirmed number')
+    plt.xlabel('date')
+    plt.ylabel('confirmed number')
+    plt.show()
+
+    plt.figure(figsize=(10, 8))
+    plt.plot(korea_mask['天'], korea_mask['마스크: (南韓)'])
+    plt.title('South Korea search mask google trend')
+    plt.xlabel('date')
+    plt.ylabel('search count')
     plt.show()
 
     outbreak_date = calculate_start_outbreak_date(Korea)
     print('outbreak at:', outbreak_date)
-
-    #Taiwan
-    plt.figure(figsize=(10, 8))
-    plt.plot(Taiwan['ObservationDate'], Taiwan['Confirmed'])
-    plt.show()
-
-    outbreak_date = calculate_start_outbreak_date(Taiwan)
-    print('outbreak at:', outbreak_date)
-
-    #France
-    plt.figure(figsize=(10, 8))
-    plt.plot(France['ObservationDate'], France['Confirmed'])
-    plt.show()
-
-    outbreak_date = calculate_start_outbreak_date(France)
-    print('outbreak at:', outbreak_date)
-
 
