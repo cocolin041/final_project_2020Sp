@@ -18,13 +18,13 @@ Using data visualization to choose countries that have interesting trend and do 
 ## Result
 
 ### Germany
-![image]("./image/germany.png")
+![image](image/germany.png)
 
 Start doing more than 100,000 tests daily at early April <br>
 daily rate of confirmed number: 2990 -> 1780
 
 ### Korea
-![image]("./image/korea.png")
+![image](image/korea.png)
 
 By mid-March, 270,000 South Koreans had been tested <br>
 daily rate of confirmed number: 482 -> 110 -> 21
